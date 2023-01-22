@@ -5,7 +5,7 @@ import { delay, materialize, dematerialize } from 'rxjs/operators';
 
 // tömb a local stroge-ban, a regisztrált felhasználók számára
 const usersKey = 'users';
-let users: any[] = JSON.parse(localStorage.getItem(usersKey)!) || [];
+let users: any[] = JSON.parse(localStorage.getItem(usersKey)) || [];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
